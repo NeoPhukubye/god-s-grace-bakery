@@ -46,6 +46,32 @@ h1, h2, h3 {
     color: var(--golden-brown);
 }
 
+/* Language Switcher */
+.lang-switcher {
+    display: flex;
+    gap: 0.3rem;
+}
+
+.lang-btn {
+    padding: 0.3rem 0.6rem;
+    border: 1px solid var(--accent-gold);
+    background: transparent;
+    color: var(--dark-brown);
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.75rem;
+    font-weight: 700;
+    font-family: 'Lato', sans-serif;
+    transition: all 0.3s;
+}
+
+.lang-btn:hover,
+.lang-btn.active {
+    background: var(--golden-brown);
+    color: var(--white);
+    border-color: var(--golden-brown);
+}
+
 .nav-links {
     display: flex;
     list-style: none;
@@ -294,6 +320,10 @@ footer {
 
 /* Responsive */
 @media (max-width: 768px) {
+    .navbar {
+        flex-wrap: wrap;
+    }
+
     .nav-links {
         display: none;
         position: absolute;
@@ -313,6 +343,13 @@ footer {
 
     .nav-toggle {
         display: block;
+    }
+
+    .lang-switcher {
+        order: -1;
+        flex-basis: 100%;
+        justify-content: center;
+        margin-bottom: 0.5rem;
     }
 
     .hero-content h1 {
