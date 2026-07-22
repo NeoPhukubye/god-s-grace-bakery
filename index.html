@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>God's Grace Bakery</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-brand">God's Grace Bakery</div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#menu">Our Treats</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Visit Us</a></li>
+        </ul>
+        <button class="nav-toggle" aria-label="Toggle menu">&#9776;</button>
+    </nav>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>God's Grace Bakery</h1>
+            <p>Baked with love, served with grace</p>
+            <a href="#menu" class="btn">Explore Our Treats</a>
+        </div>
+    </section>
+
+    <section id="menu" class="menu-section">
+        <h2>Our Delicacies</h2>
+        <div class="filter-buttons">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="cakes">Cakes</button>
+            <button class="filter-btn" data-filter="breads">Breads</button>
+            <button class="filter-btn" data-filter="pastries">Pastries</button>
+            <button class="filter-btn" data-filter="cookies">Cookies</button>
+        </div>
+        <div class="menu-grid">
+            <div class="menu-item" data-category="cakes">
+                <div class="item-image" style="background-color: #f4c2c2;">🎂</div>
+                <h3>Red Velvet Cake</h3>
+                <p>Rich, velvety layers with cream cheese frosting</p>
+            </div>
+            <div class="menu-item" data-category="cakes">
+                <div class="item-image" style="background-color: #ffe4b5;">🍰</div>
+                <h3>Carrot Cake</h3>
+                <p>Spiced perfection topped with walnut cream cheese</p>
+            </div>
+            <div class="menu-item" data-category="cakes">
+                <div class="item-image" style="background-color: #d2691e;">🎂</div>
+                <h3>Chocolate Fudge Cake</h3>
+                <p>Triple chocolate indulgence for the bold</p>
+            </div>
+            <div class="menu-item" data-category="breads">
+                <div class="item-image" style="background-color: #deb887;">🍞</div>
+                <h3>Sourdough Loaf</h3>
+                <p>Crusty outside, soft inside — 24-hour ferment</p>
+            </div>
+            <div class="menu-item" data-category="breads">
+                <div class="item-image" style="background-color: #f5deb3;">🥖</div>
+                <h3>French Baguette</h3>
+                <p>Golden, crispy, and perfect with butter</p>
+            </div>
+            <div class="menu-item" data-category="breads">
+                <div class="item-image" style="background-color: #d2b48c;">🍞</div>
+                <h3>Cinnamon Raisin Bread</h3>
+                <p>Sweet swirls of cinnamon in every slice</p>
+            </div>
+            <div class="menu-item" data-category="pastries">
+                <div class="item-image" style="background-color: #ffe4c4;">🥐</div>
+                <h3>Butter Croissant</h3>
+                <p>Flaky, buttery layers of French perfection</p>
+            </div>
+            <div class="menu-item" data-category="pastries">
+                <div class="item-image" style="background-color: #faebd7;">🧁</div>
+                <h3>Vanilla Cupcakes</h3>
+                <p>Light and fluffy with buttercream swirls</p>
+            </div>
+            <div class="menu-item" data-category="pastries">
+                <div class="item-image" style="background-color: #fff8dc;">🥧</div>
+                <h3>Apple Danish</h3>
+                <p>Caramelized apples in golden puff pastry</p>
+            </div>
+            <div class="menu-item" data-category="cookies">
+                <div class="item-image" style="background-color: #f5f5dc;">🍪</div>
+                <h3>Chocolate Chip Cookies</h3>
+                <p>Chewy centers with crispy edges — classic!</p>
+            </div>
+            <div class="menu-item" data-category="cookies">
+                <div class="item-image" style="background-color: #ffe4e1;">🍪</div>
+                <h3>Snickerdoodles</h3>
+                <p>Soft, pillowy, rolled in cinnamon sugar</p>
+            </div>
+            <div class="menu-item" data-category="cookies">
+                <div class="item-image" style="background-color: #e6e6fa;">🍪</div>
+                <h3>Lavender Shortbread</h3>
+                <p>Delicate and fragrant — melt in your mouth</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about-section">
+        <div class="about-content">
+            <h2>Our Story</h2>
+            <div class="about-text">
+                <p>At God's Grace Bakery, every loaf, cake, and pastry is baked with love and gratitude. We believe that the simple act of baking is a blessing — turning flour, sugar, and butter into moments of joy.</p>
+                <p>Our recipes are inspired by traditions passed down through generations, each one carrying a story and a prayer. From our ovens to your table, we hope every bite reminds you of grace and goodness.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact-section">
+        <h2>Visit Us</h2>
+        <div class="contact-grid">
+            <div class="contact-card">
+                <span class="contact-icon">📍</span>
+                <h3>Location</h3>
+                <p>123 Grace Street<br>Bakeryville, BK 12345</p>
+            </div>
+            <div class="contact-card">
+                <span class="contact-icon">🕐</span>
+                <h3>Hours</h3>
+                <p>Mon–Fri: 6am – 6pm<br>Sat–Sun: 7am – 4pm</p>
+            </div>
+            <div class="contact-card">
+                <span class="contact-icon">📞</span>
+                <h3>Contact</h3>
+                <p>Phone: (555) 123-4567<br>Email: hello@godsgrace.bakery</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 God's Grace Bakery. Baked with love.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
