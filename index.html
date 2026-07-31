@@ -3,15 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="God's Grace Bakery — artisan cakes, breads, pastries and cookies baked fresh daily with love and gratitude.">
-    <meta name="keywords" content="bakery, cakes, bread, pastries, cookies, artisan, fresh baked">
-    <meta property="og:title" content="God's Grace Bakery">
-    <meta property="og:description" content="Baked with love, served with grace. Artisan cakes, breads, pastries and cookies.">
+    <meta name="description" content="God's Grace Bakery — artisan cakes, breads, pastries and cookies baked fresh daily with love and gratitude. Order online or visit us.">
+    <meta name="keywords" content="bakery, cakes, bread, pastries, cookies, artisan, fresh baked, order online">
+    <meta property="og:title" content="God's Grace Bakery — Baked with Love">
+    <meta property="og:description" content="Artisan cakes, breads, pastries and cookies baked fresh daily with love and gratitude.">
     <meta property="og:type" content="website">
     <meta name="theme-color" content="#8b6914">
     <title>God's Grace Bakery — Baked with Love, Served with Grace</title>
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400&family=Lato:wght@300;400;700;900&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -34,186 +34,299 @@
     </script>
 </head>
 <body>
+    <!-- Page Loader -->
+    <div class="page-loader" id="pageLoader">
+        <div class="loader-content">
+            <div class="loader-logo">God's Grace</div>
+            <div class="loader-bar"><div class="loader-progress"></div></div>
+        </div>
+    </div>
+
+    <!-- Floating Particles -->
+    <div class="particles" aria-hidden="true" id="particles"></div>
+
     <nav class="navbar" role="navigation" aria-label="Main navigation">
-        <div class="nav-brand">God's Grace Bakery</div>
-        <div class="lang-switcher" aria-label="Language selector">
-            <button class="lang-btn active" data-lang="en" aria-label="English">EN</button>
-            <button class="lang-btn" data-lang="af" aria-label="Afrikaans">AF</button>
-            <button class="lang-btn" data-lang="zu" aria-label="isiZulu">ZU</button>
-            <button class="lang-btn" data-lang="st" aria-label="Sesotho">ST</button>
-            <button class="lang-btn" data-lang="tn" aria-label="Setswana">TN</button>
-            <button class="lang-btn" data-lang="fr" aria-label="Français">FR</button>
+        <div class="nav-brand">
+            <span class="brand-icon">&#9672;</span>
+            God's Grace Bakery
         </div>
         <ul class="nav-links">
             <li><a href="#home" data-i18n="navHome">Home</a></li>
             <li><a href="#menu" data-i18n="navTreats">Our Treats</a></li>
             <li><a href="#about" data-i18n="navAbout">About</a></li>
             <li><a href="#testimonials" data-i18n="navTestimonials">Testimonials</a></li>
+            <li><a href="#gallery" data-i18n="navGallery">Gallery</a></li>
             <li><a href="#contact" data-i18n="navVisit">Visit Us</a></li>
         </ul>
+        <div class="nav-actions">
+            <div class="lang-switcher" aria-label="Language selector">
+                <button class="lang-btn active" data-lang="en" aria-label="English">EN</button>
+                <button class="lang-btn" data-lang="af" aria-label="Afrikaans">AF</button>
+                <button class="lang-btn" data-lang="zu" aria-label="isiZulu">ZU</button>
+                <button class="lang-btn" data-lang="st" aria-label="Sesotho">ST</button>
+                <button class="lang-btn" data-lang="tn" aria-label="Setswana">TN</button>
+                <button class="lang-btn" data-lang="fr" aria-label="Français">FR</button>
+            </div>
+            <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+                <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+                <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
+            </button>
+        </div>
         <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
             <span class="hamburger"></span>
         </button>
     </nav>
 
     <section id="home" class="hero">
-        <div class="hero-overlay"></div>
+        <div class="hero-bg-pattern" aria-hidden="true"></div>
         <div class="hero-content">
             <div class="hero-badge" data-i18n="heroBadge">Est. 2020</div>
-            <h1 data-i18n="heroTitle">God's Grace Bakery</h1>
-            <p data-i18n="heroSubtitle">Baked with love, served with grace</p>
-            <a href="#menu" class="btn btn-primary" data-i18n="heroBtn">Explore Our Treats</a>
+            <h1 class="hero-title">
+                <span class="hero-title-line" data-i18n="heroTitle">God's Grace Bakery</span>
+            </h1>
+            <p class="hero-subtitle" data-i18n="heroSubtitle">Baked with love, served with grace</p>
+            <div class="hero-cta">
+                <a href="#menu" class="btn btn-primary" data-i18n="heroBtn">Explore Our Treats</a>
+                <a href="#contact" class="btn btn-outline" data-i18n="heroBtn2">Visit Us</a>
+            </div>
+            <div class="hero-stats">
+                <div class="hero-stat">
+                    <span class="hero-stat-number">5000+</span>
+                    <span class="hero-stat-label" data-i18n="heroStat1">Baked Weekly</span>
+                </div>
+                <div class="hero-stat-divider"></div>
+                <div class="hero-stat">
+                    <span class="hero-stat-number">6</span>
+                    <span class="hero-stat-label" data-i18n="heroStat2">Years of Love</span>
+                </div>
+                <div class="hero-stat-divider"></div>
+                <div class="hero-stat">
+                    <span class="hero-stat-number">100%</span>
+                    <span class="hero-stat-label" data-i18n="heroStat3">Handcrafted</span>
+                </div>
+            </div>
         </div>
         <div class="scroll-indicator" aria-hidden="true">
-            <span></span>
+            <span class="scroll-text">Scroll</span>
+            <span class="scroll-line"></span>
         </div>
     </section>
 
     <section id="menu" class="menu-section">
-        <div class="section-header">
-            <span class="section-tag" data-i18n="menuTag">Fresh Daily</span>
-            <h2 data-i18n="menuTitle">Our Delicacies</h2>
-        </div>
-        <div class="filter-buttons">
-            <button class="filter-btn active" data-filter="all" data-i18n="filterAll">All</button>
-            <button class="filter-btn" data-filter="cakes" data-i18n="filterCakes">Cakes</button>
-            <button class="filter-btn" data-filter="breads" data-i18n="filterBreads">Breads</button>
-            <button class="filter-btn" data-filter="pastries" data-i18n="filterPastries">Pastries</button>
-            <button class="filter-btn" data-filter="cookies" data-i18n="filterCookies">Cookies</button>
-        </div>
-        <div class="menu-grid">
-            <div class="menu-item" data-category="cakes">
-                <div class="item-image-wrapper">
-                    <img class="item-image" loading="lazy" src="https://images.pexels.com/photos/1721934/pexels-photo-1721934.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&dpr=1" alt="Red Velvet Cake">
-                    <span class="item-badge">Popular</span>
-                </div>
-                <div class="item-content">
-                    <h3 data-i18n="item1Name">Red Velvet Cake</h3>
-                    <p data-i18n="item1Desc">Rich, velvety layers with cream cheese frosting</p>
-                </div>
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-tag" data-i18n="menuTag">Fresh Daily</span>
+                <h2 data-i18n="menuTitle">Our Delicacies</h2>
+                <p class="section-desc" data-i18n="menuDesc">Every item handcrafted with the finest ingredients and a whole lot of love</p>
             </div>
-            <div class="menu-item" data-category="cakes">
-                <div class="item-image-wrapper">
-                    <img class="item-image" loading="lazy" src="https://images.pexels.com/photos/14107158/pexels-photo-14107158.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&dpr=1" alt="Carrot Cake">
-                </div>
-                <div class="item-content">
-                    <h3 data-i18n="item2Name">Carrot Cake</h3>
-                    <p data-i18n="item2Desc">Spiced perfection topped with walnut cream cheese</p>
-                </div>
+            <div class="filter-buttons reveal">
+                <button class="filter-btn active" data-filter="all" data-i18n="filterAll">All</button>
+                <button class="filter-btn" data-filter="cakes" data-i18n="filterCakes">Cakes</button>
+                <button class="filter-btn" data-filter="breads" data-i18n="filterBreads">Breads</button>
+                <button class="filter-btn" data-filter="pastries" data-i18n="filterPastries">Pastries</button>
+                <button class="filter-btn" data-filter="cookies" data-i18n="filterCookies">Cookies</button>
             </div>
-            <div class="menu-item" data-category="cakes">
-                <div class="item-image-wrapper">
-                    <img class="item-image" loading="lazy" src="https://images.pexels.com/photos/291528/pexels-photo-291528.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&dpr=1" alt="Chocolate Fudge Cake">
+            <div class="menu-grid">
+                <div class="menu-item" data-category="cakes">
+                    <div class="item-image-wrapper">
+                        <img class="item-image" loading="lazy" src="https://images.pexels.com/photos/1721934/pexels-photo-1721934.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&dpr=1" alt="Red Velvet Cake">
+                        <span class="item-badge" data-i18n="badgePopular">Popular</span>
+                        <div class="item-overlay">
+                            <span class="item-category">Cakes</span>
+                        </div>
+                    </div>
+                    <div class="item-content">
+                        <h3 data-i18n="item1Name">Red Velvet Cake</h3>
+                        <p data-i18n="item1Desc">Rich, velvety layers with cream cheese frosting</p>
+                    </div>
                 </div>
-                <div class="item-content">
-                    <h3 data-i18n="item3Name">Chocolate Fudge Cake</h3>
-                    <p data-i18n="item3Desc">Triple chocolate indulgence for the bold</p>
+                <div class="menu-item" data-category="cakes">
+                    <div class="item-image-wrapper">
+                        <img class="item-image" loading="lazy" src="https://images.pexels.com/photos/14107158/pexels-photo-14107158.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&dpr=1" alt="Carrot Cake">
+                        <div class="item-overlay">
+                            <span class="item-category">Cakes</span>
+                        </div>
+                    </div>
+                    <div class="item-content">
+                        <h3 data-i18n="item2Name">Carrot Cake</h3>
+                        <p data-i18n="item2Desc">Spiced perfection topped with walnut cream cheese</p>
+                    </div>
                 </div>
-            </div>
-            <div class="menu-item" data-category="breads">
-                <div class="item-image-wrapper">
-                    <img class="item-image" loading="lazy" src="https://images.pexels.com/photos/1775043/pexels-photo-1775043.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&dpr=1" alt="Sourdough Loaf">
-                    <span class="item-badge">New</span>
+                <div class="menu-item" data-category="cakes">
+                    <div class="item-image-wrapper">
+                        <img class="item-image" loading="lazy" src="https://images.pexels.com/photos/291528/pexels-photo-291528.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&dpr=1" alt="Chocolate Fudge Cake">
+                        <div class="item-overlay">
+                            <span class="item-category">Cakes</span>
+                        </div>
+                    </div>
+                    <div class="item-content">
+                        <h3 data-i18n="item3Name">Chocolate Fudge Cake</h3>
+                        <p data-i18n="item3Desc">Triple chocolate indulgence for the bold</p>
+                    </div>
                 </div>
-                <div class="item-content">
-                    <h3 data-i18n="item4Name">Sourdough Loaf</h3>
-                    <p data-i18n="item4Desc">Crusty outside, soft inside — 24-hour ferment</p>
+                <div class="menu-item" data-category="breads">
+                    <div class="item-image-wrapper">
+                        <img class="item-image" loading="lazy" src="https://images.pexels.com/photos/1775043/pexels-photo-1775043.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&dpr=1" alt="Sourdough Loaf">
+                        <span class="item-badge item-badge-new" data-i18n="badgeNew">New</span>
+                        <div class="item-overlay">
+                            <span class="item-category">Breads</span>
+                        </div>
+                    </div>
+                    <div class="item-content">
+                        <h3 data-i18n="item4Name">Sourdough Loaf</h3>
+                        <p data-i18n="item4Desc">Crusty outside, soft inside — 24-hour ferment</p>
+                    </div>
                 </div>
-            </div>
-            <div class="menu-item" data-category="breads">
-                <div class="item-image-wrapper">
-                    <img class="item-image" loading="lazy" src="https://images.pexels.com/photos/1387070/pexels-photo-1387070.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&dpr=1" alt="French Baguette">
+                <div class="menu-item" data-category="breads">
+                    <div class="item-image-wrapper">
+                        <img class="item-image" loading="lazy" src="https://images.pexels.com/photos/1387070/pexels-photo-1387070.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&dpr=1" alt="French Baguette">
+                        <div class="item-overlay">
+                            <span class="item-category">Breads</span>
+                        </div>
+                    </div>
+                    <div class="item-content">
+                        <h3 data-i18n="item5Name">French Baguette</h3>
+                        <p data-i18n="item5Desc">Golden, crispy, and perfect with butter</p>
+                    </div>
                 </div>
-                <div class="item-content">
-                    <h3 data-i18n="item5Name">French Baguette</h3>
-                    <p data-i18n="item5Desc">Golden, crispy, and perfect with butter</p>
+                <div class="menu-item" data-category="breads">
+                    <div class="item-image-wrapper">
+                        <img class="item-image" loading="lazy" src="https://images.pexels.com/photos/1756061/pexels-photo-1756061.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&dpr=1" alt="Cinnamon Raisin Bread">
+                        <div class="item-overlay">
+                            <span class="item-category">Breads</span>
+                        </div>
+                    </div>
+                    <div class="item-content">
+                        <h3 data-i18n="item6Name">Cinnamon Raisin Bread</h3>
+                        <p data-i18n="item6Desc">Sweet swirls of cinnamon in every slice</p>
+                    </div>
                 </div>
-            </div>
-            <div class="menu-item" data-category="breads">
-                <div class="item-image-wrapper">
-                    <img class="item-image" loading="lazy" src="https://images.pexels.com/photos/1756061/pexels-photo-1756061.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&dpr=1" alt="Cinnamon Raisin Bread">
+                <div class="menu-item" data-category="pastries">
+                    <div class="item-image-wrapper">
+                        <img class="item-image" loading="lazy" src="https://images.pexels.com/photos/2135/food-france-morning-breakfast.jpg?auto=compress&cs=tinysrgb&w=400&h=300&dpr=1" alt="Butter Croissant">
+                        <span class="item-badge" data-i18n="badgeBest">Best Seller</span>
+                        <div class="item-overlay">
+                            <span class="item-category">Pastries</span>
+                        </div>
+                    </div>
+                    <div class="item-content">
+                        <h3 data-i18n="item7Name">Butter Croissant</h3>
+                        <p data-i18n="item7Desc">Flaky, buttery layers of French perfection</p>
+                    </div>
                 </div>
-                <div class="item-content">
-                    <h3 data-i18n="item6Name">Cinnamon Raisin Bread</h3>
-                    <p data-i18n="item6Desc">Sweet swirls of cinnamon in every slice</p>
+                <div class="menu-item" data-category="pastries">
+                    <div class="item-image-wrapper">
+                        <img class="item-image" loading="lazy" src="https://images.pexels.com/photos/1028714/pexels-photo-1028714.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&dpr=1" alt="Vanilla Cupcakes">
+                        <div class="item-overlay">
+                            <span class="item-category">Pastries</span>
+                        </div>
+                    </div>
+                    <div class="item-content">
+                        <h3 data-i18n="item8Name">Vanilla Cupcakes</h3>
+                        <p data-i18n="item8Desc">Light and fluffy with buttercream swirls</p>
+                    </div>
                 </div>
-            </div>
-            <div class="menu-item" data-category="pastries">
-                <div class="item-image-wrapper">
-                    <img class="item-image" loading="lazy" src="https://images.pexels.com/photos/2135/food-france-morning-breakfast.jpg?auto=compress&cs=tinysrgb&w=400&h=300&dpr=1" alt="Butter Croissant">
-                    <span class="item-badge">Best Seller</span>
+                <div class="menu-item" data-category="pastries">
+                    <div class="item-image-wrapper">
+                        <img class="item-image" loading="lazy" src="https://images.pexels.com/photos/6163263/pexels-photo-6163263.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&dpr=1" alt="Apple Danish">
+                        <div class="item-overlay">
+                            <span class="item-category">Pastries</span>
+                        </div>
+                    </div>
+                    <div class="item-content">
+                        <h3 data-i18n="item9Name">Apple Danish</h3>
+                        <p data-i18n="item9Desc">Caramelized apples in golden puff pastry</p>
+                    </div>
                 </div>
-                <div class="item-content">
-                    <h3 data-i18n="item7Name">Butter Croissant</h3>
-                    <p data-i18n="item7Desc">Flaky, buttery layers of French perfection</p>
+                <div class="menu-item" data-category="cookies">
+                    <div class="item-image-wrapper">
+                        <img class="item-image" loading="lazy" src="https://images.pexels.com/photos/230325/pexels-photo-230325.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&dpr=1" alt="Chocolate Chip Cookies">
+                        <div class="item-overlay">
+                            <span class="item-category">Cookies</span>
+                        </div>
+                    </div>
+                    <div class="item-content">
+                        <h3 data-i18n="item10Name">Chocolate Chip Cookies</h3>
+                        <p data-i18n="item10Desc">Chewy centers with crispy edges — classic!</p>
+                    </div>
                 </div>
-            </div>
-            <div class="menu-item" data-category="pastries">
-                <div class="item-image-wrapper">
-                    <img class="item-image" loading="lazy" src="https://images.pexels.com/photos/1028714/pexels-photo-1028714.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&dpr=1" alt="Vanilla Cupcakes">
+                <div class="menu-item" data-category="cookies">
+                    <div class="item-image-wrapper">
+                        <img class="item-image" loading="lazy" src="https://images.pexels.com/photos/890577/pexels-photo-890577.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&dpr=1" alt="Snickerdoodles">
+                        <div class="item-overlay">
+                            <span class="item-category">Cookies</span>
+                        </div>
+                    </div>
+                    <div class="item-content">
+                        <h3 data-i18n="item11Name">Snickerdoodles</h3>
+                        <p data-i18n="item11Desc">Soft, pillowy, rolled in cinnamon sugar</p>
+                    </div>
                 </div>
-                <div class="item-content">
-                    <h3 data-i18n="item8Name">Vanilla Cupcakes</h3>
-                    <p data-i18n="item8Desc">Light and fluffy with buttercream swirls</p>
-                </div>
-            </div>
-            <div class="menu-item" data-category="pastries">
-                <div class="item-image-wrapper">
-                    <img class="item-image" loading="lazy" src="https://images.pexels.com/photos/6163263/pexels-photo-6163263.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&dpr=1" alt="Apple Danish">
-                </div>
-                <div class="item-content">
-                    <h3 data-i18n="item9Name">Apple Danish</h3>
-                    <p data-i18n="item9Desc">Caramelized apples in golden puff pastry</p>
-                </div>
-            </div>
-            <div class="menu-item" data-category="cookies">
-                <div class="item-image-wrapper">
-                    <img class="item-image" loading="lazy" src="https://images.pexels.com/photos/230325/pexels-photo-230325.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&dpr=1" alt="Chocolate Chip Cookies">
-                </div>
-                <div class="item-content">
-                    <h3 data-i18n="item10Name">Chocolate Chip Cookies</h3>
-                    <p data-i18n="item10Desc">Chewy centers with crispy edges — classic!</p>
-                </div>
-            </div>
-            <div class="menu-item" data-category="cookies">
-                <div class="item-image-wrapper">
-                    <img class="item-image" loading="lazy" src="https://images.pexels.com/photos/890577/pexels-photo-890577.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&dpr=1" alt="Snickerdoodles">
-                </div>
-                <div class="item-content">
-                    <h3 data-i18n="item11Name">Snickerdoodles</h3>
-                    <p data-i18n="item11Desc">Soft, pillowy, rolled in cinnamon sugar</p>
-                </div>
-            </div>
-            <div class="menu-item" data-category="cookies">
-                <div class="item-image-wrapper">
-                    <img class="item-image" loading="lazy" src="https://images.pexels.com/photos/4110003/pexels-photo-4110003.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&dpr=1" alt="Lavender Shortbread">
-                </div>
-                <div class="item-content">
-                    <h3 data-i18n="item12Name">Lavender Shortbread</h3>
-                    <p data-i18n="item12Desc">Delicate and fragrant — melt in your mouth</p>
+                <div class="menu-item" data-category="cookies">
+                    <div class="item-image-wrapper">
+                        <img class="item-image" loading="lazy" src="https://images.pexels.com/photos/4110003/pexels-photo-4110003.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&dpr=1" alt="Lavender Shortbread">
+                        <div class="item-overlay">
+                            <span class="item-category">Cookies</span>
+                        </div>
+                    </div>
+                    <div class="item-content">
+                        <h3 data-i18n="item12Name">Lavender Shortbread</h3>
+                        <p data-i18n="item12Desc">Delicate and fragrant — melt in your mouth</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <section id="about" class="about-section">
-        <div class="about-content">
-            <span class="section-tag" data-i18n="aboutTag">Since 2020</span>
-            <h2 data-i18n="aboutTitle">Our Story</h2>
-            <div class="about-text">
-                <p data-i18n="aboutP1">At God's Grace Bakery, every loaf, cake, and pastry is baked with love and gratitude. We believe that the simple act of baking is a blessing — turning flour, sugar, and butter into moments of joy.</p>
-                <p data-i18n="aboutP2">Our recipes are inspired by traditions passed down through generations, each one carrying a story and a prayer. From our ovens to your table, we hope every bite reminds you of grace and goodness.</p>
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-images reveal">
+                    <div class="about-img-stack">
+                        <img loading="lazy" src="https://images.pexels.com/photos/1070946/pexels-photo-1070946.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Baker at work" class="about-img about-img-1">
+                        <img loading="lazy" src="https://images.pexels.com/photos/2067024/pexels-photo-2067024.jpeg?auto=compress&cs=tinysrgb&w=300" alt="Fresh bread" class="about-img about-img-2">
+                    </div>
+                </div>
+                <div class="about-content reveal">
+                    <span class="section-tag" data-i18n="aboutTag">Since 2020</span>
+                    <h2 data-i18n="aboutTitle">Our Story</h2>
+                    <p data-i18n="aboutP1">At God's Grace Bakery, every loaf, cake, and pastry is baked with love and gratitude. We believe that the simple act of baking is a blessing — turning flour, sugar, and butter into moments of joy.</p>
+                    <p data-i18n="aboutP2">Our recipes are inspired by traditions passed down through generations, each one carrying a story and a prayer. From our ovens to your table, we hope every bite reminds you of grace and goodness.</p>
+                    <div class="about-features">
+                        <div class="about-feature">
+                            <span class="feature-icon">&#10023;</span>
+                            <span data-i18n="feature1">All Natural Ingredients</span>
+                        </div>
+                        <div class="about-feature">
+                            <span class="feature-icon">&#10023;</span>
+                            <span data-i18n="feature2">Baked Fresh Daily</span>
+                        </div>
+                        <div class="about-feature">
+                            <span class="feature-icon">&#10023;</span>
+                            <span data-i18n="feature3">Family Recipes</span>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="about-stats">
-                <div class="stat">
+        </div>
+    </section>
+
+    <section class="stats-banner">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item reveal">
                     <span class="stat-number" data-count="5000">0</span>
                     <span class="stat-label" data-i18n="statLoaves">Loaves Baked Weekly</span>
                 </div>
-                <div class="stat">
+                <div class="stat-item reveal">
                     <span class="stat-number" data-count="12">0</span>
                     <span class="stat-label" data-i18n="statRecipes">Signature Recipes</span>
                 </div>
-                <div class="stat">
+                <div class="stat-item reveal">
+                    <span class="stat-number" data-count="15000">0</span>
+                    <span class="stat-label" data-i18n="statCustomers">Happy Customers</span>
+                </div>
+                <div class="stat-item reveal">
                     <span class="stat-number" data-count="6">0</span>
                     <span class="stat-label" data-i18n="statYears">Years of Grace</span>
                 </div>
@@ -222,69 +335,162 @@
     </section>
 
     <section id="testimonials" class="testimonials-section">
-        <div class="section-header">
-            <span class="section-tag" data-i18n="testimonialTag">Kind Words</span>
-            <h2 data-i18n="testimonialTitle">What Our Customers Say</h2>
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-tag" data-i18n="testimonialTag">Kind Words</span>
+                <h2 data-i18n="testimonialTitle">What Our Customers Say</h2>
+            </div>
+            <div class="testimonial-track">
+                <div class="testimonial-card reveal">
+                    <div class="testimonial-quote">&ldquo;</div>
+                    <p class="testimonial-text" data-i18n="testimonial1">The best red velvet cake I've ever tasted. Every bite is pure heaven!</p>
+                    <div class="testimonial-author-info">
+                        <div class="testimonial-avatar">SM</div>
+                        <div>
+                            <span class="testimonial-author" data-i18n="testimonial1Author">Sarah M.</span>
+                            <div class="testimonial-stars" aria-label="5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card reveal">
+                    <div class="testimonial-quote">&ldquo;</div>
+                    <p class="testimonial-text" data-i18n="testimonial2">Their sourdough is the real deal. Crusty, tangy, and absolutely addictive.</p>
+                    <div class="testimonial-author-info">
+                        <div class="testimonial-avatar">DK</div>
+                        <div>
+                            <span class="testimonial-author" data-i18n="testimonial2Author">David K.</span>
+                            <div class="testimonial-stars" aria-label="5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card reveal">
+                    <div class="testimonial-quote">&ldquo;</div>
+                    <p class="testimonial-text" data-i18n="testimonial3">A bakery that feels like home. The warmth and care shows in everything they make.</p>
+                    <div class="testimonial-author-info">
+                        <div class="testimonial-avatar">TN</div>
+                        <div>
+                            <span class="testimonial-author" data-i18n="testimonial3Author">Thandiwe N.</span>
+                            <div class="testimonial-stars" aria-label="5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="testimonial-track">
-            <div class="testimonial-card">
-                <div class="testimonial-stars" aria-label="5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-                <p class="testimonial-text" data-i18n="testimonial1">"The best red velvet cake I've ever tasted. Every bite is pure heaven!"</p>
-                <span class="testimonial-author" data-i18n="testimonial1Author">— Sarah M.</span>
+    </section>
+
+    <section id="gallery" class="gallery-section">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-tag" data-i18n="galleryTag">Behind the Scenes</span>
+                <h2 data-i18n="galleryTitle">From Our Kitchen</h2>
             </div>
-            <div class="testimonial-card">
-                <div class="testimonial-stars" aria-label="5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-                <p class="testimonial-text" data-i18n="testimonial2">"Their sourdough is the real deal. Crusty, tangy, and absolutely addictive."</p>
-                <span class="testimonial-author" data-i18n="testimonial2Author">— David K.</span>
-            </div>
-            <div class="testimonial-card">
-                <div class="testimonial-stars" aria-label="5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-                <p class="testimonial-text" data-i18n="testimonial3">"A bakery that feels like home. The warmth and care shows in everything they make."</p>
-                <span class="testimonial-author" data-i18n="testimonial3Author">— Thandiwe N.</span>
+            <div class="gallery-grid">
+                <div class="gallery-item gallery-item-tall reveal">
+                    <img loading="lazy" src="https://images.pexels.com/photos/1070946/pexels-photo-1070946.jpeg?auto=compress&cs=tinysrgb&w=500" alt="Baker kneading dough">
+                    <div class="gallery-overlay"><span data-i18n="galleryCaption1">The Art of Kneading</span></div>
+                </div>
+                <div class="gallery-item reveal">
+                    <img loading="lazy" src="https://images.pexels.com/photos/2135/food-france-morning-breakfast.jpg?auto=compress&cs=tinysrgb&w=400" alt="Fresh croissants">
+                    <div class="gallery-overlay"><span data-i18n="galleryCaption2">Morning Croissants</span></div>
+                </div>
+                <div class="gallery-item reveal">
+                    <img loading="lazy" src="https://images.pexels.com/photos/1028714/pexels-photo-1028714.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Decorating cupcakes">
+                    <div class="gallery-overlay"><span data-i18n="galleryCaption3">Sweet Details</span></div>
+                </div>
+                <div class="gallery-item gallery-item-wide reveal">
+                    <img loading="lazy" src="https://images.pexels.com/photos/2067024/pexels-photo-2067024.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Fresh loaves cooling">
+                    <div class="gallery-overlay"><span data-i18n="galleryCaption4">Fresh From the Oven</span></div>
+                </div>
+                <div class="gallery-item reveal">
+                    <img loading="lazy" src="https://images.pexels.com/photos/1721934/pexels-photo-1721934.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Red velvet cake">
+                    <div class="gallery-overlay"><span data-i18n="galleryCaption5">Red Velvet Love</span></div>
+                </div>
             </div>
         </div>
     </section>
 
     <section id="contact" class="contact-section">
-        <div class="section-header">
-            <span class="section-tag" data-i18n="contactTag">Come Say Hello</span>
-            <h2 data-i18n="contactTitle">Visit Us</h2>
-        </div>
-        <div class="contact-grid">
-            <div class="contact-card">
-                <div class="contact-icon-wrapper">
-                    <svg class="contact-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-                </div>
-                <h3 data-i18n="contactLocation">Location</h3>
-                <p data-i18n-html="contactAddress">123 Grace Street<br>Bakeryville, BK 12345</p>
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-tag" data-i18n="contactTag">Come Say Hello</span>
+                <h2 data-i18n="contactTitle">Visit Us</h2>
             </div>
-            <div class="contact-card">
-                <div class="contact-icon-wrapper">
-                    <svg class="contact-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            <div class="contact-grid">
+                <div class="contact-card reveal">
+                    <div class="contact-icon-wrapper">
+                        <svg class="contact-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                    </div>
+                    <h3 data-i18n="contactLocation">Location</h3>
+                    <p data-i18n-html="contactAddress">123 Grace Street<br>Bakeryville, BK 12345</p>
                 </div>
-                <h3 data-i18n="contactHours">Hours</h3>
-                <p data-i18n-html="contactHoursDetail">Mon–Fri: 6am – 6pm<br>Sat–Sun: 7am – 4pm</p>
-            </div>
-            <div class="contact-card">
-                <div class="contact-icon-wrapper">
-                    <svg class="contact-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+                <div class="contact-card reveal">
+                    <div class="contact-icon-wrapper">
+                        <svg class="contact-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                    </div>
+                    <h3 data-i18n="contactHours">Hours</h3>
+                    <p data-i18n-html="contactHoursDetail">Mon–Fri: 6am – 6pm<br>Sat–Sun: 7am – 4pm</p>
                 </div>
-                <h3 data-i18n="contactContact">Contact</h3>
-                <p data-i18n-html="contactDetail">Phone: (555) 123-4567<br>Email: hello@godsgrace.bakery</p>
+                <div class="contact-card reveal">
+                    <div class="contact-icon-wrapper">
+                        <svg class="contact-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+                    </div>
+                    <h3 data-i18n="contactContact">Contact</h3>
+                    <p data-i18n-html="contactDetail">Phone: (555) 123-4567<br>Email: hello@godsgrace.bakery</p>
+                </div>
             </div>
         </div>
     </section>
 
     <footer>
-        <div class="footer-content">
-            <div class="footer-brand">God's Grace Bakery</div>
-            <p data-i18n="footer">&copy; 2026 God's Grace Bakery. Baked with love.</p>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand-section">
+                    <div class="footer-brand">God's Grace Bakery</div>
+                    <p class="footer-tagline" data-i18n="footerTagline">Baked with love, served with grace</p>
+                    <div class="footer-socials">
+                        <a href="#" aria-label="Instagram" class="social-link">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+                        </a>
+                        <a href="#" aria-label="Facebook" class="social-link">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+                        </a>
+                        <a href="#" aria-label="Twitter" class="social-link">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"/></svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-links-section">
+                    <h4 data-i18n="footerQuickLinks">Quick Links</h4>
+                    <ul>
+                        <li><a href="#menu" data-i18n="navTreats">Our Treats</a></li>
+                        <li><a href="#about" data-i18n="navAbout">About</a></li>
+                        <li><a href="#gallery" data-i18n="navGallery">Gallery</a></li>
+                        <li><a href="#contact" data-i18n="navVisit">Visit Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-newsletter">
+                    <h4 data-i18n="footerNewsletter">Stay in Touch</h4>
+                    <p data-i18n="footerNewsletterDesc">Get fresh updates and special offers</p>
+                    <form class="newsletter-form" onsubmit="return false;">
+                        <input type="email" placeholder="your@email.com" aria-label="Email address" required>
+                        <button type="submit" data-i18n="footerSubscribe">Join</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p data-i18n="footer">&copy; 2026 God's Grace Bakery. Baked with love.</p>
+            </div>
         </div>
     </footer>
 
     <a href="https://wa.me/15551234567" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
         <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
     </a>
+
+    <!-- Back to Top -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="18 15 12 9 6 15"/></svg>
+    </button>
 
     <script src="translations.js"></script>
     <script src="script.js"></script>
