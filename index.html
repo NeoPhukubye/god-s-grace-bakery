@@ -37,6 +37,8 @@
     </script>
 </head>
 <body>
+    <a href="#home" class="skip-link">Skip to main content</a>
+
     <!-- Page Loader -->
     <div class="page-loader" id="pageLoader">
         <div class="loader-content">
@@ -122,14 +124,14 @@
                 <h2 data-i18n="menuTitle">Our Delicacies</h2>
                 <p class="section-desc" data-i18n="menuDesc">Every item handcrafted with the finest ingredients and a whole lot of love</p>
             </div>
-            <div class="filter-buttons reveal">
+            <div class="filter-buttons reveal" role="group" aria-label="Filter menu items">
                 <button class="filter-btn active" data-filter="all" data-i18n="filterAll">All</button>
                 <button class="filter-btn" data-filter="cakes" data-i18n="filterCakes">Cakes</button>
                 <button class="filter-btn" data-filter="breads" data-i18n="filterBreads">Breads</button>
                 <button class="filter-btn" data-filter="pastries" data-i18n="filterPastries">Pastries</button>
                 <button class="filter-btn" data-filter="cookies" data-i18n="filterCookies">Cookies</button>
             </div>
-            <div class="menu-grid">
+            <div class="menu-grid" aria-live="polite">
                 <div class="menu-item" data-category="cakes">
                     <div class="item-image-wrapper">
                         <img class="item-image" loading="lazy" src="https://images.pexels.com/photos/1721934/pexels-photo-1721934.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&dpr=1" alt="Red Velvet Cake">
