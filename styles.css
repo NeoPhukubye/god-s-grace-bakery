@@ -1319,6 +1319,21 @@ footer::before {
     animation: fadeIn 1s ease 2.5s forwards;
 }
 
+.whatsapp-float::before {
+    content: '';
+    position: absolute;
+    inset: -4px;
+    border-radius: 50%;
+    background: rgba(37, 211, 102, 0.3);
+    animation: whatsapp-pulse 2s ease infinite;
+    z-index: -1;
+}
+
+@keyframes whatsapp-pulse {
+    0%, 100% { transform: scale(1); opacity: 0.4; }
+    50% { transform: scale(1.15); opacity: 0; }
+}
+
 .whatsapp-float:hover {
     transform: scale(1.1) translateY(-3px);
     box-shadow: 0 8px 35px rgba(37, 211, 102, 0.5);
