@@ -612,18 +612,21 @@ h1, h2, h3, h4 {
     font-weight: 700;
     font-size: 0.85rem;
     transition: var(--transition);
+    position: relative;
+    overflow: hidden;
 }
 
 .filter-btn:hover {
     border-color: var(--golden-brown);
     color: var(--golden-brown);
+    background: rgba(200, 149, 108, 0.05);
 }
 
 .filter-btn.active {
     background: var(--golden-brown);
     color: var(--white);
     border-color: var(--golden-brown);
-    box-shadow: 0 4px 15px rgba(139, 105, 20, 0.25);
+    box-shadow: var(--shadow-gold);
 }
 
 .menu-grid {
@@ -1148,9 +1151,21 @@ h1, h2, h3, h4 {
 
 /* Footer */
 footer {
-    background: #1a1410;
+    background: linear-gradient(180deg, #1a1410 0%, #0f0b08 100%);
     color: var(--light-gold);
     padding: 5rem 0 2rem;
+    position: relative;
+}
+
+footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--accent-gold), transparent);
+    opacity: 0.4;
 }
 
 .footer-grid {
