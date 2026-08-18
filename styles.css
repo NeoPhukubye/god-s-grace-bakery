@@ -301,6 +301,9 @@ h1, h2, h3, h4 {
 .nav-links a.active { color: var(--golden-brown); }
 
 /* Language Switcher */
+/* Hide mobile-only lang switcher on desktop */
+.nav-links .mobile-lang-switcher { display: none; }
+
 .nav-actions {
     display: flex;
     align-items: center;
@@ -1484,7 +1487,11 @@ footer::before {
         gap: 6px;
         flex-wrap: wrap;
         justify-content: center;
-        margin-top: 1rem;
+        margin-top: 0.5rem;
+        background: var(--card-border);
+        padding: 4px;
+        border-radius: 10px;
+        list-style: none;
     }
 
     .nav-toggle { display: flex; align-items: center; }
